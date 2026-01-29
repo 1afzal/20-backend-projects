@@ -3,7 +3,7 @@ import { Schema } from "mongoose";
 
 export type ExpenseCategory =  | "Groceries" | "Liesure" | "Subscriptions" | "Dine out" | "Others"
 
-export interface IExpense {
+export interface IExpense extends Document {
     userId: mongoose.Schema.Types.ObjectId,
     amount: number,
     category: ExpenseCategory,
