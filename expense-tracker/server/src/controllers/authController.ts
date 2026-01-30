@@ -4,6 +4,7 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 async function signup(req:Request, res:Response){
   try {
+    //{ name: "John Doe", email: "John@gmail.com", password: "123123"}
     const name = req.body.name;
     const email = req.body.email;
     const password = req.body.password;

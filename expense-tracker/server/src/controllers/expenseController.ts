@@ -12,7 +12,7 @@ export const getExpenses = async (req: Request, res: Response) => {
 
   const query: any = { userId }; //query will be specific distinct userId
   const now = new Date();
-  let start: Date | undefined
+  let start: Date | undefined //declare a start date
 
 
   if (filter === "week") {
