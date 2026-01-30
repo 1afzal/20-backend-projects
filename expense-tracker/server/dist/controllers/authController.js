@@ -1,10 +1,9 @@
-import { Router } from "express";
-const userRouter = Router();
 import { userModel } from "../models/userModel.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-userRouter.post(`/signup`, async (req, res) => {
+async function signup(req, res) {
     try {
+        //{ name: "John Doe", email: "John@gmail.com", password: "123123"}
         const name = req.body.name;
         const email = req.body.email;
         const password = req.body.password;
@@ -30,8 +29,9 @@ userRouter.post(`/signup`, async (req, res) => {
             console.log(err);
         }
     }
-});
-userRouter.post("/signin", async (req, res) => {
+}
+;
+async function signin(req, res) {
     try {
         const { email, password } = req.body;
         if (!email || !password) {
@@ -60,11 +60,6 @@ userRouter.post("/signin", async (req, res) => {
         return res.status(200).json({
             message: "Signin successful",
             token,
-            user: {
-                id: foundUser._id,
-                name: foundUser.name,
-                email: foundUser.email
-            }
         });
     }
     catch (err) {
@@ -73,6 +68,7 @@ userRouter.post("/signin", async (req, res) => {
             message: "Internal server error",
         });
     }
-});
-export { userRouter };
-//# sourceMappingURL=userRoute.js.map
+}
+;
+export { signin, signup };
+//# sourceMappingURL=authController.js.map

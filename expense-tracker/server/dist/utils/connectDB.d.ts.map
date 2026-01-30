@@ -1,1 +1,1 @@
-{"version":3,"file":"connectDB.d.ts","sourceRoot":"","sources":["../../src/utils/connectDB.ts"],"names":[],"mappings":"AAGA,QAAA,MAAM,SAAS,GAAS,KAAI,MAAM,kBAOjC,CAAA;AACD,OAAO,EAAE,SAAS,EAAE,CAAC"}
+{"version":3,"file":"connectDB.d.ts","sourceRoot":"","sources":["../../src/utils/connectDB.ts"],"names":[],"mappings":"AAEA,QAAA,MAAM,SAAS,GAAU,KAAI,MAAM,KAAG,OAAO,CAAC,IAAI,CAQjD,CAAC;AAEF,OAAO,EAAE,SAAS,EAAE,CAAC"}

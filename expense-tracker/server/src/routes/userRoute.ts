@@ -66,6 +66,7 @@ userRouter.post("/signin", async (req, res) => {
         {
           userId: foundUser._id,
           email: foundUser.email,
+
         },
         process.env.JWT_SECRET as string,
         {
@@ -76,6 +77,11 @@ userRouter.post("/signin", async (req, res) => {
       return res.status(200).json({
         message: "Signin successful",
         token,
+        user: {
+          id: foundUser._id,
+          name: foundUser.name,
+          email: foundUser.email
+        }
       });
     } catch (err) {
       console.error(err);
